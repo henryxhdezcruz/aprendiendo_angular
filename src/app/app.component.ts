@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PhotosService } from './services/photos.service';
+import { Photo } from './models/Photos';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aprendiendo_angular';
+
+  albunsId = [1,2,3];
+
+  constructor(public photosService: PhotosService) {
+
+  }
+
+
 }
